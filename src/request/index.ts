@@ -20,7 +20,7 @@ export class BaseRequest {
     });
   };
 
-  GET(data: { url: string; store: string; token: string; payload: object; params?: object }): Promise<any> {
+  GET(data: { url: string; store: string; token: string; payload?: object; params?: object }): Promise<any> {
     return new Promise((resolve, reject) => {
       let httpConfig = { headers: {} };
       if (data.token) {
