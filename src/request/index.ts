@@ -1,12 +1,14 @@
 import * as util from 'util'
 import axios from 'axios';
+import { UrlService } from '../urlService';
 
 
-export class BaseRequest {
+export class BaseRequest extends UrlService {
   protected cache;
   protected M2_API;
   protected store;
   constructor(cache: boolean, api: string, store: string) {
+    super();
     this.cache = cache;
     this.M2_API = api;
     this.store = store;

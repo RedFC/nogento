@@ -1,4 +1,5 @@
-export declare class BaseRequest {
+import { UrlService } from '../urlService';
+export declare class BaseRequest extends UrlService {
     protected cache: boolean;
     protected M2_API: string;
     protected store: string;
@@ -8,7 +9,7 @@ export declare class BaseRequest {
         url: string;
         store: string;
         token: string;
-        payload: object;
+        payload?: object;
         params?: object;
     }): Promise<any>;
     POST(data: {
